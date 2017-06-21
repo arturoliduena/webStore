@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  background-image: url(https://images5.alphacoders.com/659/659985.jpg);
+}
+.clear {
+    clear: left;
+}
+
+.divCentrado{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.img{
+	height: 120px;
+
+	}
+
+a {
+  color: #00B7FF;
+}

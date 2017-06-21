@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Armas Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+
+<!-- ///////////////////////////////////////////// NAV BAR ///////////////////////////////////// -->
+
+ <!-- ARREGLAR BUTTON CATEGORIAS Y USUARIO -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ALAMACEN DE ARMAS</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIAS <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Producto">
+        </div>
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <button id="buttonNewProduct" type="button" class="btn btn-default" aria-label="Left Align">
+         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+        <li><a href="#">Usuario</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+  <!-- //////////////////////////////////////// BOTONES /////////////////////////////////// -->
+  <button id="user">traer usuarios</button>
+  <button id="buttonProducts">Productos</button>
+  
+
+
+ 
+ <div id="container">
+
+<!-- //////////////////////////////////////////// SHOW -> 1 USUARIO //////////////////////--> 
+<!-- //////////////////////////////////////////// SHOW -> ALL USERS /////////////////-->
+<!-- //////////////////////////////////////////// SHOW -> ALL PRODUCTS /////////////////-->
+<!-- //////////////////////////////////////////// SHOW -> 1 PRODUCT /////////////////-->
+
+</div>
+
+
+   <div id="newProduct">
+      <div>
+        <h1>Crear Producto</h1>
+        <form method='post' class="form-horizontal">
+          <div class="form-group">
+              <label class="col-sm-2 control-label">Nombre</label>
+              <div class="col-sm-6">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre del Producto">
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="col-sm-2 control-label">Precio</label>
+              <div class="col-sm-6">
+                <input id='iprecio' type="text" name="precio" class="form-control" placeholder="Precio $">
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="col-sm-2 control-label">ImgUrl</label>
+              <div class="col-sm-6">
+                <input type="text" name="imgUrl" class="form-control" placeholder="URL de la imagen">
+              </div>
+          </div>
+          <div class="form-group">
+              <label class="col-sm-2 control-label">description</label>
+              <div class="col-sm-6">
+                <input type="text" name="description" class="form-control" placeholder="Descripcion del Producto">
+              </div>
+          </div>
+          <div id='divCategorias'>
+          <label class="col-sm-2 control-label">Categorias</label>
+          <select id='selectCategorias' name="categorias" class="btn btn-default">
+        
+          </select>
+           	<button id='crearCategoria' type="button" class="btn btn-default" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-plus" aria-hidden="true"><small> Categoria</small></span>
+			</button>
+          </div>
+
+				   <div id="newCategoria">
+				        <h3>Crear Categoria</h3>
+				        <form method='post' class="form-horizontal">
+				          <div class="form-group">
+				              <label class="col-sm-2 control-label">Nombre</label>
+				              <div class="col-sm-6">
+				                <input type="text" name="nombreCategoria" class="form-control" placeholder="Nombre de la Categoria">
+				              </div>
+				          </div>
+				          <div class="form-group">
+				              <label class="col-sm-2 control-label">Descripcion</label>
+				              <div class="col-sm-6">
+				                <input type="text" name="descriptionCategoria" class="form-control" placeholder="Descripcion de la Categorias">
+				              </div>
+				          </div>
+				         <div class="form-group">
+				          <div class="col-sm-offset-2 col-sm-10">
+				            <button id='crearNewCategoria' type="button" class="btn btn-default" aria-label="Left Align">
+  							<span  class="glyphicon glyphicon-plus" aria-hidden="true"> Categoria</span>
+							</button>
+				          </div>
+				          </div>
+
+				         </form>
+				    </div>
+
+          <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+          	<button id='crearNewProduct' type="button" class="btn btn-default" aria-label="Left Align" style='margin-top:20px'>
+  			<span class="glyphicon glyphicon-screenshot" aria-hidden="true"><br>Crear</span>
+			</button>
+          </div>
+          </div>
+
+            </form>
+           
+
+	</div>
+</div>
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/javascripts/home.js"></script>
+
+
+  </body>
+</html>
